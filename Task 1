@@ -1,0 +1,9 @@
+try:
+    with open('sample.txt', 'r') as file:
+        print("Reading contents of sample.txt with line numbers:\n" + "-"*45)
+        for line_number, line_content in enumerate(file, 1):
+            print(f"Line {line_number}: {line_content.strip()}")
+
+except FileNotFoundError:
+    print("Error: The file 'sample.txt' was not found.")
+    print("Please make sure the file exists in the same directory as this script.")
